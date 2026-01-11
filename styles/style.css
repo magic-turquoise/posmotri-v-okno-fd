@@ -10,6 +10,7 @@ html {
 
 .page {
   inline-size: 1200px;
+  min-height: 800px;
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -18,25 +19,40 @@ html {
   background-color: #1b1919;
   display: flex;
   padding: 133px 30px 133px 30px;
+  justify-content: center; /* по горизонтали */
+  align-items: center;    /* по вертикали */
 }
 
 .content {
   display: flex;
+  align-items: flex-end;
   width: 1140px;
   gap: 30px;
 }
 
 .result {
-  margin-top: 78px;
-  width: 711px;
+  display: flex;
+  flex-direction: column;
+  /*width: 711px;*/
 }
 
-.result__video-container {
-  width: 100%;
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start
+}
+
+.content__list-container {
+  height: 298px;
+  overflow: auto;
 }
 
 .content__details {
-  width: 399px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
 
 h1,
