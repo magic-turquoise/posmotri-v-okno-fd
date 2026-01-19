@@ -18,7 +18,7 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
-  padding: 133px 30px 133px 30px;
+  padding: 333px 390px;
   justify-content: center; /* по горизонтали */
   align-items: center;    /* по вертикали */
 }
@@ -28,18 +28,21 @@ html {
   align-items: flex-end;
   width: 1140px;
   gap: 30px;
+  
 }
 
 .result {
   display: flex;
   flex-direction: column;
+  margin-top: 78px;
+  gap: 10px;
   /*width: 711px;*/
 }
 
 .result__video-container {
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  /*margin-bottom: 16px;*/
   position: relative;
 }
 
@@ -92,6 +95,8 @@ html {
 
  .search-form__textfield::placeholder {
    color: rgb(255, 255, 255 / 0.7);
+   font-size: 18px;
+   font-family: 'Fira Sans Condensed', sans-serif;
  }
 
  /* Внутри — когда поле в фокусе — добавляем outline */
@@ -184,14 +189,15 @@ button:focus-visible {
 }
 
 .title {
-  /*font-family: 'Oswald', sans-serif;*/
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
+  text-transform: uppercase;  
 }  
 
 .content__accent {
-  color:rgb(84, 80, 80);
+  color:rgb(84, 80, 80);  
 }
 
 .content__list-container {
@@ -261,6 +267,8 @@ button:focus-visible {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
 }
 
 .content__video-card-description {
@@ -271,6 +279,7 @@ button:focus-visible {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .content__video-card-thumbnail {
