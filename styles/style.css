@@ -19,7 +19,7 @@ html {
   background-color: #1b1919;
   display: flex;
   padding: 333px 390px;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
@@ -90,10 +90,10 @@ html {
   width: 225px;
   border: none;
   border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; 
+  border-bottom: 1px solid #ccc;
   color: #fff;
   font-size: 18px;
-  background-color: transparent;  
+  background-color: transparent;
   appearance: none;
   outline: none;
 }
@@ -121,7 +121,7 @@ html {
   height: 19px;
   border: 1px solid #fff;
   padding: 1px;
-  display: inline-block;  
+  display: inline-block;
   background-color: transparent;
 }
 
@@ -169,7 +169,7 @@ button:focus {
 }
 
 button:focus-visible {
-  outline: 1px dashed #fff; 
+  outline: 1px dashed #fff;
   box-shadow: 0 0 0 1px #fff;
 }
 
@@ -254,7 +254,7 @@ button:focus-visible {
 
 .content__video-card-description-container {
   flex-grow: 1;
-  height: 103px; 
+  height: 103px;
   min-width: 196px;
 }
 
