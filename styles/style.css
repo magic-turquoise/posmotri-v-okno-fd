@@ -88,8 +88,8 @@ html {
 
 .search-form__textfield {
   width: 225px;
-  border: none; 
-  border-top: 1px solid #ccc; 
+  border: none;
+  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc; 
   color: #fff;
   font-size: 18px;
@@ -106,32 +106,32 @@ html {
 
  /* Внутри — когда поле в фокусе — добавляем outline */
  .search-form__textfield:focus {
-  outline: 2px solid #fff; 
+  outline: 2px solid #fff;
 }
 
 /* Когда поле в состоянии :focus-visible, но не в :focus — добавьте границу к родителю */
 .search-form__fieldset:has(:focus-visible) {
   border: 1px solid #00f; /* граница, когда поле активно и видно фокус */
   padding: 4px; /* подгоните паддинг, чтобы граница не перекрывала текст */
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  border: 1px solid #fff; 
-  padding: 1px;           
+  border: 1px solid #fff;
+  padding: 1px;
   display: inline-block;  
   background-color: transparent;
 }
 
 .search-form__pseudo-checkbox::after {
-  content: "";                     
-  display: block;                  
-  background-color: #fff;          
-  width: 100%;                     
-  height: 100%;                    
-  opacity: 0;                      
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -143,15 +143,15 @@ html {
 }
 
 .search-form__fieldset:has(.search-form__checkbox-list:focus) {
-  outline: 1px solid #fff; 
+  outline: 1px solid #fff;
 }
 
 .button {
-  border: 1px solid #fff;       
-  color: #fff;      
-  background-color: transparent;      
-  font-size: 18px;      
-  font-weight: bold;                   
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -161,7 +161,7 @@ html {
 }
 
 .button:active {
-  color: #808080; 
+  color: #808080;
 }
 
 button:focus {
@@ -170,7 +170,7 @@ button:focus {
 
 button:focus-visible {
   outline: 1px dashed #fff; 
-  box-shadow: 0 0 0 1px #fff; 
+  box-shadow: 0 0 0 1px #fff;
 }
 
 .search-form__submit-button {
@@ -191,11 +191,11 @@ button:focus-visible {
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }  
 
 .content__accent {
-  color:rgb(84, 80, 80);  
+  color:rgb(84, 80, 80);
 }
 
 .content__list-container {
@@ -217,24 +217,21 @@ button:focus-visible {
   text-decoration: none;
   color: rgb(255, 255, 255);
   display: block;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .content__card-link_current {
   background-color: #808080;
+  outline: none;
 }
 
 .content__card-link_current:active {
   background-color: #808080;
-  color: #fff; 
+  color: #fff;
 }
 
 .content__list-item:hover {
   text-decoration: underline;
-}
-
-.content__card-link_current {
-  outline: none;
 }
 
 .content__card-link_current:focus-visible {
@@ -253,7 +250,7 @@ button:focus-visible {
 .content__video-card-description-container {
   flex-grow: 1;
   height: 103px; 
-  min-width: 196px; 
+  min-width: 196px;
 }
 
 .content__video-card-title {
@@ -269,7 +266,7 @@ button:focus-visible {
 .content__video-card-description {
   font-size: 18px;
   line-height: 16.2px;
-  display: -webkit-box; 
+  display: -webkit-box;
   -webkit-line-clamp: 3; 
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -278,14 +275,13 @@ button:focus-visible {
 }
 
 .content__video-card-thumbnail {
-  height: 103px; 
-  min-width: 194px; 
-  object-fit: cover; 
-  object-position: center; 
-  width: 100%; 
+  height: 103px;
+  min-width: 194px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
   display: block;
 }
-
 
 .content__details {
   width: 100%;
