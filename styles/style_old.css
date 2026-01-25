@@ -8,25 +8,6 @@ html {
   block-size: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -43,24 +24,25 @@ ol {
 .content {
   margin-top: 520px;
   margin-left: 397px;
-  width: 1140px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
+  width: 1140px;
   gap: 30px;
   
 }
 
 .result {
-  width: 711px;
-  margin-top: 70px;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
+  margin-top: 78px;
   gap: 16px;
+  width: 711px;
 }
 
 .result__video-container {
   width: 711px;
   height: 386px;
+  margin-bottom: 16px;
   position: relative;
 }
 
@@ -72,7 +54,6 @@ ol {
 }
 
 .search-form {
-  height: 54px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -82,35 +63,40 @@ ol {
   border: none;
 }
 
+fieldset:nth-last-of-type {
+  margin-left: 50;
+}
+
+
+/*.search-form__fieldset:nth-last-of-type {
+  margin-left: 20;
+}*/
+
 .search-form__fieldset-title {
-  height: 22px;
   font-size: 18px;
   font-weight: 400;
-  line-height: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
-}  
+  /*gap: 15px;*/
+}
+
+/*.search-form__checkbox {
+  margin-right: 1px;
+}*/
 
 .search-form__label {
   display: flex;
   align-items: center;
   width: fit-content;
-  gap: 1.5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
- .search-form__label:hover .search-form__label-text {
-  text-decoration: underline;
+  justify-content: flex-start;
+  /*gap: 15px*/
 }
 
 .search-form__textfield {
   width: 225px;
-  height: 22px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -122,10 +108,21 @@ ol {
   outline: none;
 }
 
-.search-form__textfield::placeholder {
+ .search-form__textfield::placeholder {
    color: rgb(255, 255, 255 / 0.7);
    font-size: 18px;
-   font-weight: 400;
+}
+
+ /* Внутри — когда поле в фокусе — добавляем outline */
+ .search-form__textfield:focus {
+  outline: 2px solid #fff;
+}
+
+/* Когда поле в состоянии :focus-visible, но не в :focus — добавьте границу к родителю */
+.search-form__fieldset:has(:focus-visible) {
+  border: 1px solid #fff; /* граница, когда поле активно и видно фокус */
+  padding: 4px; /* подгоните паддинг, чтобы граница не перекрывала текст */
+  border-radius: 4px;
 }
 
 .search-form__pseudo-checkbox {
@@ -150,6 +147,14 @@ ol {
   opacity: 1;
 }
 
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__fieldset:has(.search-form__checkbox-list:focus) {
+  outline: 1px solid #fff;
+}
+
 .button {
   border: 1px solid #fff;
   color: #fff;
@@ -167,7 +172,16 @@ ol {
 }
 
 .button:active {
-  background-color: #808080;
+  color: #808080;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 1px dashed #fff;
+  box-shadow: 0 0 0 1px #fff;
 }
 
 .search-form__submit-button {
@@ -180,11 +194,12 @@ ol {
 }
 
 .content__details {
+  font-family: 'Oswald', sans-serif;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 26px;  
+  gap: 26px;
 }
 
 .title {
@@ -202,10 +217,10 @@ ol {
 .content__list-container {
   height: 298px;
   overflow: auto;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  position: relative;
+  gap: 101px;
 }
 
 .content__list {
@@ -215,31 +230,32 @@ ol {
 }
 
 .content__card-link {
-  color: rgb(255, 255, 255);
   text-decoration: none;
+  color: rgb(255, 255, 255);
   display: block;
   cursor: pointer;
 }
 
 .content__card-link_current {
   background-color: #808080;
+  outline: none;
 }
 
-.content__card-link:active {
+.content__card-link_current:active {
   background-color: #808080;
   color: #fff;
 }
 
-.content__card-link:hover {
+.content__list-item:hover {
   text-decoration: underline;
 }
 
-.content__card-link:focus {
- outline: none;
+.content__card-link_current:focus-visible {
+  outline: 2px solid #0056b3;
 }
 
-.content__card-link:focus-visible {
- outline: 1px solid #fff;
+.content__list-item {
+  padding: 0 3px;
 }
 
 .content__video-card {
@@ -268,7 +284,7 @@ ol {
   font-size: 18px;
   line-height: 16.2px;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -282,6 +298,25 @@ ol {
   object-position: center;
   width: 100%;
   display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 /* Кастомный скроллбар */
