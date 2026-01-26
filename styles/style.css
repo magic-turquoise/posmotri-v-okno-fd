@@ -55,7 +55,7 @@ ol {
   margin-top: 70px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 25px;
 }
 
 .result__video-container {
@@ -72,7 +72,7 @@ ol {
 }
 
 .search-form {
-  height: 54px;
+  /*height: 54px;*/
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -87,12 +87,14 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 17px;
+  justify-content: space-around;
+  padding-right: 6px;
 }  
 
 .search-form__label {
@@ -110,7 +112,7 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  height: 22px;
+  height: 25px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
