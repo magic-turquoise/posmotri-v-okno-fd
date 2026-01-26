@@ -30,7 +30,8 @@ ol {
 .page {
   inline-size: 1200px;
   block-size: 100%;
-  margin: auto;
+  /*margin: auto;*/
+  padding: 333px 390px 333px 390px;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -41,8 +42,8 @@ ol {
 }
 
 .content {
-  margin-top: 520px;
-  margin-left: 397px;
+  /*margin-top: 520px;
+  margin-left: 397px;*/
   max-width: 1140px;
   width: 100%;
   display: flex;
