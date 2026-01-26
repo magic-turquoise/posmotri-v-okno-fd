@@ -43,7 +43,8 @@ ol {
 .content {
   margin-top: 520px;
   margin-left: 397px;
-  width: 1140px;
+  max-width: 1140px;
+  width: 100%;
   display: flex;
   align-items: flex-end;
   gap: 30px;
@@ -92,7 +93,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 17px;
+  gap: 16px;
   justify-content: space-around;
   padding-right: 6px;
 }  
@@ -101,7 +102,7 @@ ol {
   display: flex;
   align-items: center;
   width: fit-content;
-  gap: 1.5px;
+  gap: 5px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -169,7 +170,7 @@ ol {
 }
 
 .button:active {
-  background-color: #808080;
+  background-color: #848080;
 }
 
 .search-form__submit-button {
@@ -224,11 +225,11 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: #808080;
+  background-color: #848080;
 }
 
 .content__card-link:active {
-  background-color: #808080;
+  background-color: #848080;
   color: #fff;
 }
 
