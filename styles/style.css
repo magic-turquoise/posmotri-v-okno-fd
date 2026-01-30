@@ -52,7 +52,7 @@ ol {
   margin-top: 78px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 25px;
 }
 
 .result__video-container {
